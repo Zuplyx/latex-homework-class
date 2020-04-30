@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \LoadClassWithOptions{article}
-\ProvidesClass{homework}[2014/12/16 Class file for homework assignments]
+\ProvidesClass{homework}[2020/04/30 Class file for homework assignments]
 
 % ----- Options ---------------------------------------------------------------
 \newcommand\@opanon{0}
@@ -30,13 +30,21 @@
 \RequirePackage{enumerate}
 \RequirePackage{enumitem}
 
-% Nice images, figures, and listings
+% Nice images, figures, graphs, and listings
 \RequirePackage{graphicx}
 \RequirePackage{grffile}
 \RequirePackage[all]{xy}
 \RequirePackage{wrapfig}
 \RequirePackage{fancyvrb}
 \RequirePackage{listings}
+\RequirePackage{float}
+\RequirePackage{tikz}
+\RequirePackage{caption}
+\RequirePackage{xcolor}
+
+% German language input
+\RequirePackage[ngerman]{babel}
+\RequirePackage[utf8]{inputenc}
 
 % Conditionals
 \RequirePackage{ifthen}
@@ -53,7 +61,7 @@
 \newcounter{partCounter}[questionCounter]
 
 % Prefix for questions
-\newcommand{\questiontype}[0]{Question}
+\newcommand{\questiontype}[0]{Aufgabe}
 
 % Use this if your "written" questions are all under one section
 % For example, if the homework handout has Section 5: Written Questions
@@ -135,6 +143,17 @@
 \vspace{#1}
 \end{framed}}
 
+% ----- Graph Setup ------------------------------------------------------------
+
+\usetikzlibrary{shapes, arrows, calc, arrows.meta, fit, positioning, quotes} % these are the parameters passed to the library to create the node graphs  
+\tikzset{  
+	-Latex,auto,node distance =1 cm and 1.3 cm, thick,% node distance is the distance between one node to other, where 1.5cm is the length of the edge between the nodes  
+	state/.style ={ellipse, draw, minimum width = 0.9 cm}, % the minimum width is the width of the ellipse, which is the size of the shape of vertex in the node graph  
+	point/.style = {circle, draw, inner sep=0.18cm, fill, node contents={}},  
+	bidirected/.style={Latex-Latex,dashed}, % it is the edge having two directions  
+	el/.style = {inner sep=2.5pt, align=right, sloped}  
+}  
+
 % ----- Page Setup ------------------------------------------------------------
 
 % Use block style paragraphs
@@ -193,6 +212,7 @@
     \newpage
   }
 }
+
 
 % ----- For usage with pandoc converted documents -----------------------------
 

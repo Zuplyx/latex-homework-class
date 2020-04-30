@@ -1,7 +1,7 @@
 # LaTeX Homework Class
 
 ## What
-This is a LaTeX document class. That means you use it with `\documentclass{homework}` at the top of the document. It provides a document layout and some helper commands that make working with questions easy.
+This is a LaTeX document class. That means you use it with `\documentclass{homework}` at the top of the document. It provides a document layout and some helper commands that make working with questions easy. This version has been adapted to be used in German and extended by the tikz library for the creation of node graphs.
 
 ## Installation
 Certainly the easiest way to start using this template is to copy the .cls file to your computer in the same directory as your LaTeX project directory.
@@ -102,6 +102,10 @@ In math classes, induction proofs come up a lot, and they almost always have the
     Finish off the proof
 \end{induction}
 ```
+
+### Node graph creation
+
+Certain classes require the creation of node graphs, therefore this class has been extended to include `tikz`. For an example on how to use it to create node graphs, see [homework.tex](homework.tex) or this [tutorial](https://www.javatpoint.com/latex-node-graphs-using-tikz). Additional information about `tikz` can be found in its [manual](http://mirror.physik-pool.tu-berlin.de/pub/CTAN/graphics/pgf/base/doc/pgfmanual.pdf).
 
 ### Anonymous Submissions
 
