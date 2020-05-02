@@ -26,6 +26,10 @@ The best way to install this file is to [follow the instructions here][install],
 
 [install]: https://github.com/jez/latex-solarized#installation
 
+### Use TeXstudio autocompletion
+
+To enable autocompletion for commands from this class, copy [homework.cwl](homework.cwl) to TeXstudio's [cwl directory](https://sourceforge.net/p/texstudio/wiki/Frequently%20Asked%20Questions/#where-are-cwl-files-stored).
+
 ## Usage
 
 See the [homework.tex](homework.tex) file for an exhaustive list of usage examples. There are also comments explaining features for which there are no examples given.
