@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \LoadClassWithOptions{article}
-\ProvidesClass{homework}[2020/04/30 Class file for homework assignments]
+\ProvidesClass{homework}[2020/05/01 Class file for homework assignments]
 
 % ----- Options ---------------------------------------------------------------
 \newcommand\@opanon{0}
@@ -37,7 +37,7 @@
 \RequirePackage{wrapfig}
 \RequirePackage{fancyvrb}
 \RequirePackage{listings}
-\RequirePackage{float}
+\RequirePackage{floatrow}
 \RequirePackage{tikz}
 \RequirePackage{caption}
 \RequirePackage{xcolor}
@@ -132,9 +132,9 @@
   \begin{description}
 }{\end{description}}
 
-\newcommand{\basecase}{\item[Base Case]\mbox{}\\}
-\newcommand{\indhyp}{\item[Induction Hypothesis]\mbox{}\\}
-\newcommand{\indstep}{\item[Induction Step]\mbox{}\\}
+\newcommand{\basecase}{\item[Induktionsstart]\mbox{}\\}
+\newcommand{\indhyp}{\item[Induktionsannahme]\mbox{}\\}
+\newcommand{\indstep}{\item[Induktionsschritt]\mbox{}\\}
 
 % ----- Answer Box ------------------------------------------------------------
 
@@ -147,10 +147,10 @@
 
 \usetikzlibrary{shapes, arrows, calc, arrows.meta, fit, positioning, quotes} % these are the parameters passed to the library to create the node graphs  
 \tikzset{  
-	-Latex,auto,node distance =1 cm and 1.3 cm, thick,% node distance is the distance between one node to other, where 1.5cm is the length of the edge between the nodes  
-	state/.style ={ellipse, draw, minimum width = 0.9 cm}, % the minimum width is the width of the ellipse, which is the size of the shape of vertex in the node graph  
+	-Latex,auto,node distance =1 cm and 1.2 cm, thick,% node distance is the distance between one node to other, where 1.2cm is the length of the edge between the nodes  
+	state/.style ={ellipse, draw, minimum width = 0.8 cm}, % the minimum width is the width of the ellipse, which is the size of the shape of vertex in the node graph  
 	point/.style = {circle, draw, inner sep=0.18cm, fill, node contents={}},  
-	bidirected/.style={Latex-Latex,dashed}, % it is the edge having two directions  
+	bidirected/.style={Latex-Latex,dashed}, % an edge having two directions  
 	el/.style = {inner sep=2.5pt, align=right, sloped}  
 }  
 

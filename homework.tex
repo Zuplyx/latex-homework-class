@@ -1,3 +1,4 @@
+% !TeX encoding = UTF-8
 \documentclass[11pt,largemargins]{homework}
 
 \newcommand{\hwname}{Patrick Schmitt}
@@ -144,7 +145,9 @@
 \section*{Using \texttt{tikz} to draw a node graph}
 	This is a sample node graph.
 	\begin{figure}[H]
-	\begin{tikzpicture} 
+			\floatbox[{\capbeside\thisfloatsetup{capbesideposition={right,top},capbesidewidth=4cm}}]{figure}[\FBwidth]
+			{\caption{A graph with a description on the side}\label{fig:G}}
+	{\begin{tikzpicture} 
 	% a is the name of the node and A is the text inside the node/vertex  
 	\node[state] (a) at (0,0) {$A$}; % here, state signifies that the shape of the node will be the shape declared in the state/.style command in the cls file.  
 	
@@ -164,9 +167,8 @@
 				(c) edge (e)
 				(c) edge (f);
 	
-	\end{tikzpicture}  
-	\caption{Graph G}
-	\label{fig:G}
-\end{figure}
+	\end{tikzpicture}}  
+	
+	\end{figure}
 
 \end{document}
